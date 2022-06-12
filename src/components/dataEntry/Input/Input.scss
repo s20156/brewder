@@ -1,0 +1,13 @@
+.inputWrapper {
+    width: 100%;
+    @include flexbox($direction: column);
+    .label {
+        height: 20px;
+        @include text-16;
+        margin-bottom: 10px;
+    }
+    .validationContainer {
+        height: 20px;
+    }
+    margin: 10px 0;
+}
