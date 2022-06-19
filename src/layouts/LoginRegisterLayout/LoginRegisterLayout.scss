@@ -1,0 +1,25 @@
+.loginRegisterLayout {
+    height: 100vh;
+    .logoField {
+        display: block;
+        height: 100px;
+        padding: 0;
+        @include small-mobile-and-above {
+            height: 100px;
+        }
+        @include tablet-and-above {
+            height: 100%;
+            float: left;
+            width: 540px;
+        }
+        background-color: $primary-green;
+        @include flexbox($direction: column, $align: center, $justify: center);
+    }
+    .contentField {
+        background-color: $white;
+        height: calc(100% - 100px);
+        @include tablet-and-above {
+            height: 100%;
+        }
+    }
+}
