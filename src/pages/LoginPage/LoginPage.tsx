@@ -4,7 +4,7 @@ import LoginForm from "../../components/LoginForm/LoginForm";
 import { LoginRegisterLayout } from "../../layouts/LoginRegisterLayout";
 
 export interface LoginFormRequest {
-    login: string;
+    email: string;
     password: string;
 }
 
