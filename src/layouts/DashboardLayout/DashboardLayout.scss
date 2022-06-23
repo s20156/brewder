@@ -1,0 +1,13 @@
+.dashboardLayout {
+    width: 100vw;
+    height: 100vh;
+    
+    .headerContainer {
+        height: 60px;
+        width: 100%;
+        background-color: $primary;
+    }
+    .contentField {
+        height: calc(100% - 60px);
+    }
+}

@@ -12,7 +12,7 @@
             float: left;
             width: 540px;
         }
-        background-color: $primary-green;
+        background-color: $primary;
         @include flexbox($direction: column, $align: center, $justify: center);
     }
     .contentField {
