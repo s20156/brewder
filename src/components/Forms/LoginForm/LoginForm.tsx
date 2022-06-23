@@ -1,9 +1,9 @@
 import React from "react";
 import { Formik } from "formik";
-import { LoginInput, PasswordInput } from "../dataEntry/Input/Input";
-import Button from "../interaction/Button"
-import {LoginFormRequest} from "../../pages/LoginPage/LoginPage";
-import { LoginFormValidationSchema } from "../../validationSchemas/validations";
+import { LoginInput, PasswordInput } from "../../dataEntry/Input/Input";
+import Button from "../../interaction/Button"
+import {LoginFormRequest} from "../../../pages/LoginPage/LoginPage";
+import { LoginFormValidationSchema } from "../../../validationSchemas/validations";
 
 interface LoginFormProps {
     onSubmit: (values: LoginFormRequest) => void;

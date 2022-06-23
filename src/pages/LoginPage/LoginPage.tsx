@@ -1,6 +1,6 @@
 import React from "react";
 import { RouteProps, useHistory } from "react-router";
-import LoginForm from "../../components/LoginForm/LoginForm";
+import LoginForm from "../../components/Forms/LoginForm/LoginForm";
 import { LoginRegisterLayout } from "../../layouts/LoginRegisterLayout";
 
 export interface LoginFormRequest {

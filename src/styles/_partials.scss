@@ -1,6 +1,7 @@
 // LAYOUTS
 
 @import "../layouts/LoginRegisterLayout/LoginRegisterLayout.scss";
+@import "../layouts/DashboardLayout/DashboardLayout.scss";
 
 // PAGES
 
@@ -12,7 +13,8 @@
 
 @import "../components/dataEntry/Input/Input.scss";
 @import "../components/interaction/Button/Button.scss";
+@import "../components/Header/Header.scss";
 
 
    // logic
-@import "../components/LoginForm/LoginForm.scss";
+@import "../components/Forms/LoginForm/LoginForm.scss";

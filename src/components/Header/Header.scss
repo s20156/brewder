@@ -1,5 +1,5 @@
 .ant-layout-header {
-    background-color: $primary-green !important;
+    background-color: $primary !important;
 }
 .headerContainer {
     width: 100vw;
@@ -21,16 +21,6 @@
                 font-size: 18px;
                 position: relative;
                 top: 2px;
-            }
-        }
-        .logo {
-            width: 50%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            .logoSmall {
-                margin-top: 5px;
-                height: 50px;
             }
         }
         .search {

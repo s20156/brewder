@@ -1,0 +1,4 @@
+.dashboardContent {
+    @include flexbox($direction: row, $justify: space-between, $align: flex-start);
+    height: 100%;
+}
