@@ -1,8 +1,9 @@
 import { Skeleton } from "antd";
 import React from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { RootState } from "../../../store/reducers/rootReducer";
 import Button from "../../interaction/Button";
-import { RecipeCardProps } from "../RecipeCard/RecipeCard";
 
 
 export const RecipeEmptyTab: React.FC = () => {
@@ -20,53 +21,47 @@ export const RecipeEmptyTab: React.FC = () => {
     );
 }
 
-export const RecipeDetails: React.FC<RecipeCardProps> = ({
-    id,
-    name,
-    beerStyle,
-    blg,
-    ibu,
-    color,
-    malts,
-    hops,
-    additives,
-    yeast
-
-}) => {
+export const RecipeDetails: React.FC = () => {
+    const selectedRecipeId: number = useSelector((state: RootState) => state.selectedRecipe.id);
+    const recipeData = useSelector((state: RootState) => state.recipe.recipeCards?.find(element => element.id === selectedRecipeId));
     return (
-        <div className="recipeDetails">
-            <div className="data">
-                <h1>{name}</h1>
-                <h2>{beerStyle}</h2>
-                <div className="row">
-                    <h3>Parameters:</h3>
-                    <p>BLG: {blg}</p>
-                    <p>IBU: {ibu}</p>
-                    <p>Color: {color}</p>
+        (recipeData ?
+            <div className="recipeDetails">
+                <div className="data">
+                    <h1>{recipeData.name}</h1>
+                    <h2>{recipeData.beerStyle}</h2>
+                    <div className="row">
+                        <h3>Parameters:</h3>
+                        <p>BLG: {recipeData.blg}</p>
+                        <p>IBU: {recipeData.ibu}</p>
+                        <p>Color: {recipeData.color}</p>
+                    </div>
+                </div>
+                <div className="data">
+                    <h3>Ingredients:</h3>
+                    <p>Malts: </p>
+                    {recipeData.malts.map((item,index) => (
+                        <p key={index}>{item}</p>
+                    ))}
+                    <p>Hops: </p>
+                    {recipeData.hops.map((item,index) => (
+                        <p key={index}>{item}</p>
+                    ))}
+                    <p>Additives: </p>
+                    {recipeData.additives.map((item,index) => (
+                        <p key={index}>{item}</p>
+                    ))}
+                    <p>Yeast: </p>
+                    {recipeData.yeast.map((item,index) => (
+                        <p key={index}>{item}</p>
+                    ))}
+                </div>
+                <div className="buttonsList">
+                    <Link className="button" to="/edit"><Button className="button" type="primary" label="Edit Recipe" /></Link>
                 </div>
             </div>
-            <div className="data">
-                <h3>Ingredients:</h3>
-                <p>Malts: </p>
-                {malts.map((item,index) => (
-                    <p key={index}>{item}</p>
-                ))}
-                <p>Hops: </p>
-                {hops.map((item,index) => (
-                    <p key={index}>{item}</p>
-                ))}
-                <p>Additives: </p>
-                {additives.map((item,index) => (
-                    <p key={index}>{item}</p>
-                ))}
-                <p>Yeast: </p>
-                {yeast.map((item,index) => (
-                    <p key={index}>{item}</p>
-                ))}
-            </div>
-            <div className="buttonsList">
-                <Link className="button" to="/edit"><Button className="button" type="primary" label="Edit Recipe" /></Link>
-            </div>
-        </div>
+            :
+            <RecipeEmptyTab />
+        )
     )
 }

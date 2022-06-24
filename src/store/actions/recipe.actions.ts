@@ -10,7 +10,7 @@ export interface Recipes {
 /**
  * Set recipes data
  * @param recipes
- * @returns employees data
+ * @returns recipes data
  */
 export function setRecipes(recipes: RecipeCardsProps): Recipes {
     return {

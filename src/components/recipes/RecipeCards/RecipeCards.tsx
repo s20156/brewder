@@ -1,14 +1,15 @@
 import { Skeleton } from "antd";
 import React from "react";
 import { RecipeCard, RecipeCardProps } from "../RecipeCard/RecipeCard";
-import { recipeMock } from "../../../utils/mocks/recipeMocks"; 
+import { useSelector } from "react-redux";
+import { RootState } from "../../../store/reducers/rootReducer";
 
 export interface RecipeCardsProps {
     recipeCards: RecipeCardProps[];
 }
 
 export const RecipeCards: React.FC = () => {
-    const cards: RecipeCardsProps = recipeMock;
+    const cards: RecipeCardsProps = useSelector((state: RootState) => state.recipe);
     return (
         <div className="cardsGroup">
             {!!cards ? 

@@ -2,17 +2,17 @@ import { RecipeCardsProps } from "../../components/recipes/RecipeCards/RecipeCar
 import { recipeMock } from "../../utils/mocks/recipeMocks";
 import { RecipeActions, SET_RECIPES } from "../actions/recipe.actions";
 
-export const initialEmployeesState: RecipeCardsProps = recipeMock;
+export const initialRecipesState: RecipeCardsProps = recipeMock;
 
 /**
- * Employees reducer
+ * Recipes reducer
  * @param [state]
  * @param action
  * @returns state
  */
 
 export default function recipesReducer(
-    state: RecipeCardsProps = initialEmployeesState,
+    state: RecipeCardsProps = initialRecipesState,
     action: RecipeActions,
 ) {
     switch (action.type) {
