@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { RootState } from "../../../store/reducers/rootReducer";
 import Button from "../../interaction/Button";
+import { AddRecipe } from "../AddRecipe/AddRecipe";
 
 
 export const RecipeEmptyTab: React.FC = () => {
@@ -16,6 +17,7 @@ export const RecipeEmptyTab: React.FC = () => {
                 Choose a recipe to view data or
             </div>
             <div className="addRecipeButton">
+                <AddRecipe />
             </div>
         </div>
     );
@@ -31,7 +33,7 @@ export const RecipeDetails: React.FC = () => {
                     <h1>{recipeData.name}</h1>
                     <h2>{recipeData.beerStyle}</h2>
                     <div className="row">
-                        <h3>Parameters:</h3>
+                        <p>Parameters:</p>
                         <p>BLG: {recipeData.blg}</p>
                         <p>IBU: {recipeData.ibu}</p>
                         <p>Color: {recipeData.color}</p>
