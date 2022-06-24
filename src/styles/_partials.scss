@@ -14,7 +14,15 @@
 @import "../components/dataEntry/Input/Input.scss";
 @import "../components/interaction/Button/Button.scss";
 @import "../components/Header/Header.scss";
+@import "../components/interaction/Alert/Alert.scss";
+
+   // recipes
+
+@import "../components/recipes/RecipeDetails/RecipeDetails.scss";
+@import "../components/recipes/RecipeCard/RecipeCard.scss";
+@import "../components/recipes/RecipeCards/RecipeCards.scss";
 
 
    // logic
 @import "../components/Forms/LoginForm/LoginForm.scss";
+@import "../components/Dashboard/Dashboard.scss";

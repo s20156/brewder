@@ -1,0 +1,48 @@
+.skeletonElement {
+    margin: 0 auto;
+    width: 50%;
+    height: 100%;
+    @include flexbox($direction: column, $align: center, $justify: center);
+    .skeleton {
+        height: 300px;
+        width: 300px;
+    }
+    .description {
+        @include text-20;
+    }
+    .addrecipeButton {
+        margin-top: 30px;
+    }
+}
+.recipeDetails {
+    margin: 50px;
+    width: 90%;
+    .data {
+        h1 {
+            @include text-30;
+            margin: 20px 0;
+        };
+        border-bottom: 2px $gray-border solid;
+    };
+    h3 {
+        @include text-20;
+        margin-top: 20px;
+    }
+    @include text-16;
+    .row {
+        padding: 10px 0;
+        @include flexbox($direction: row, $align: flex-start);
+        div {
+            min-width: 250px;
+        }
+    }
+    text-transform: uppercase;
+    .buttonsList {
+        width: 100%;
+        padding: 0 80px;
+        @include flexbox($direction: row, $justify: space-around);
+        .button {
+            width: 100%;
+        }
+    }
+}

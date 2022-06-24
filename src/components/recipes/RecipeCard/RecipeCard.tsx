@@ -1,5 +1,6 @@
 import React from "react";
 import { Card as AntCard } from "antd";
+import classNames from "classnames";
 
 export interface RecipeCardProps {
     id: number;
@@ -17,7 +18,7 @@ export const RecipeCard: React.FC<RecipeCardProps> = ({
     }
 
     return (
-        <AntCard className="card" title={name} onClick={handleClick}>
+        <AntCard className={classNames("card", id === 11 ? "card-active" : "")} title={name} onClick={handleClick}>
             <p>{beerStyle}</p>
         </AntCard>
     )

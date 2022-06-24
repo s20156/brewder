@@ -1,0 +1,9 @@
+.cardsGroup {
+    width: 540px;
+    height: 100%;
+    border: 0.5px solid $gray-border;
+    border-radius: 2px;
+    padding: 20px;
+    background-color: $gray-scale-2;
+    overflow: auto;
+}
