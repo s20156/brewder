@@ -1,26 +1,14 @@
 import { Skeleton } from "antd";
 import React from "react";
 import { RecipeCard, RecipeCardProps } from "../RecipeCard/RecipeCard";
- 
+import { recipeMock } from "../../../utils/mocks/recipeMocks"; 
+
 export interface RecipeCardsProps {
     recipeCards: RecipeCardProps[];
 }
 
 export const RecipeCards: React.FC = () => {
-    const cards: RecipeCardsProps = {
-        recipeCards: [
-            {
-                id: 11,
-                name: "Bloody good IPA",
-                beerStyle: "IPA"
-            },
-            {
-                id: 12,
-                name: "Black IPA",
-                beerStyle: "Black IPA"
-            }
-        ]
-    }
+    const cards: RecipeCardsProps = recipeMock;
     return (
         <div className="cardsGroup">
             {!!cards ? 

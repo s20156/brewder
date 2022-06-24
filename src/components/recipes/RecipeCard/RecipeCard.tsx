@@ -6,6 +6,13 @@ export interface RecipeCardProps {
     id: number;
     name: string;
     beerStyle: string;
+    blg: number;
+    ibu: number;
+    color: number;
+    malts: string[];
+    hops: string[];
+    additives: string[];
+    yeast: string[];
 }
 
 export const RecipeCard: React.FC<RecipeCardProps> = ({

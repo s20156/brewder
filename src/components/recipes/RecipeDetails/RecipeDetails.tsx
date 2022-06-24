@@ -2,20 +2,8 @@ import { Skeleton } from "antd";
 import React from "react";
 import { Link } from "react-router-dom";
 import Button from "../../interaction/Button";
+import { RecipeCardProps } from "../RecipeCard/RecipeCard";
 
-
-interface RecipeDetailsProps {
-    id: number;
-    name: string;
-    beerStyle: string;
-    blg: number;
-    ibu: number;
-    color: number;
-    malts: string[];
-    hops: string[];
-    additives: string[];
-    yeast: string[];
-}
 
 export const RecipeEmptyTab: React.FC = () => {
     return (
@@ -32,7 +20,7 @@ export const RecipeEmptyTab: React.FC = () => {
     );
 }
 
-export const RecipeDetails: React.FC<RecipeDetailsProps> = ({
+export const RecipeDetails: React.FC<RecipeCardProps> = ({
     id,
     name,
     beerStyle,
