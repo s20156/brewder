@@ -4,6 +4,8 @@ import classNames from "classnames";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../store/reducers/rootReducer";
 import { setSelectedRecipeId } from "../../../store/actions/selectedRecipe.actions";
+import { Malt, Hop } from "../../../utils/interfaces/interface";
+
 
 export interface RecipeCardProps {
     id: number;
@@ -12,8 +14,8 @@ export interface RecipeCardProps {
     blg: number;
     ibu: number;
     color: number;
-    malts: string[];
-    hops: string[];
+    malts: Malt[];
+    hops: Hop[];
     additives: string[];
     yeast: string[];
 }

@@ -43,11 +43,11 @@ export const RecipeDetails: React.FC = () => {
                     <h3>Ingredients:</h3>
                     <p>Malts: </p>
                     {recipeData.malts.map((item,index) => (
-                        <p key={index}>{item}</p>
+                        <p key={index}>{item.name} : {item.amount}</p>
                     ))}
                     <p>Hops: </p>
                     {recipeData.hops.map((item,index) => (
-                        <p key={index}>{item}</p>
+                        <p key={index}>{item.name} : {item.amount}</p>
                     ))}
                     <p>Additives: </p>
                     {recipeData.additives.map((item,index) => (

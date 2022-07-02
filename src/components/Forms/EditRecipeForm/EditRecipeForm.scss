@@ -1,0 +1,19 @@
+.editRecipe {
+    margin: 40px;
+    h3 {
+        @include text-30;
+    }
+    .ingredientsWrapper {
+        @include flexbox($direction: column);
+        .ingredient {
+            width: 100%;
+            @include flexbox($direction: row, $justify: space-between);
+            div {
+                margin-right: 40px;
+            }
+        }
+    }
+    .submitButton {
+        margin-top: 30px;
+    }
+}

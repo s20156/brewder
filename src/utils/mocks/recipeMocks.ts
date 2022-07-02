@@ -9,11 +9,26 @@ const recipe1: RecipeCardProps = {
     ibu: 70,
     color: 36,
     malts: [
-        "Pale ale: 5kg",
+        {
+            name: "Pale ale",
+            amount: 5,
+            extraction: 75,
+            color: 15,
+        }
     ],
     hops: [
-        "Marynka: 30g",
-        "Cascade: 70g"
+        {
+            name: "Marynka",
+            amount: 30,
+            alphaAcids: 17,
+            boilingTime: 60,
+        },
+        {
+            name: "Cascade",
+            amount: 70,
+            alphaAcids: 13,
+            boilingTime: 10,
+        }
     ],
     additives: [
         "",
@@ -31,12 +46,32 @@ const recipe2: RecipeCardProps = {
     ibu: 40,
     color: 360,
     malts: [
-        "Pale ale: 4kg",
-        "Chocolate: 1kg"
+        {
+            name: "Pale ale",
+            amount: 4,
+            extraction: 75,
+            color: 15,
+        },
+        {
+            name: "Chocolade",
+            amount: 1,
+            extraction: 70,
+            color: 300
+        }
     ],
     hops: [
-        "Marynka: 30g",
-        "Cascade: 20g"
+        {
+            name: "Cascade",
+            amount: 50,
+            alphaAcids: 13,
+            boilingTime: 60,
+        },
+        {
+            name: "Cascade",
+            amount: 50,
+            alphaAcids: 13,
+            boilingTime: 10,
+        },
     ],
     additives: [
         "",
